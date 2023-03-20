@@ -38,9 +38,10 @@
 
             <hx:SpotLight3D
                 Attenuation="0.9,0,0"
-                Direction="-1,-1,-1"
-                Position="20000,20000,20000"
-                Range="400000"
+                Direction="0,0,-1"
+                OuterAngle="270"
+                Position="0,0,20"
+                Range="40"
                 Color="Beige" />
 
 
@@ -55,10 +56,22 @@
             <hx:MeshGeometryModel3D
                 CullMode="Back"
                 Geometry="{Binding BoxGeometry}"
+                IsRendering="True"
                 IsThrowingShadow="True"
                 Material="{Binding BoxMaterial}" />
+            <hx:MeshGeometryModel3D
+                CullMode="Back"
+                Geometry="{Binding RopeGeometry}"
+                IsThrowingShadow="True"
+                Material="{Binding RopeMaterial}" />
+            <hx:MeshGeometryModel3D
+                CullMode="Back"
+                Geometry="{Binding ChainGeometry}"
+                IsThrowingShadow="True"
+                Material="{Binding ChainMaterial}" />
             <hx:LineMaterialGeometryModel3D
                 Geometry="{Binding LineGeometry}"
+                IsRendering="True"
                 IsThrowingShadow="True"
                 Material="{Binding LineMaterial}" />
         </hx:Viewport3DX>
